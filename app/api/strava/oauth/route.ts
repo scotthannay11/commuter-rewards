@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(request: NextRequest) {
+// Change function parameter name from 'request' to '_request'
+export async function GET(_request: NextRequest) {
   const params = new URLSearchParams({
     client_id: process.env.STRAVA_CLIENT_ID!,
     response_type: "code",
