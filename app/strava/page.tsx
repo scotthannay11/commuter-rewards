@@ -1,4 +1,5 @@
 "use client";
+import { Suspense } from "react";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 
@@ -11,7 +12,7 @@ interface StravaProfileType {
   // Add other fields as needed
 }
 
-export default function StravaProfile() {
+function StravaProfileInner() {
   const params = useSearchParams();
   const token = params.get("token");
   const [profile, setProfile] = useState<StravaProfileType | null>(null);
@@ -44,5 +45,13 @@ export default function StravaProfile() {
       </p>
       {/* Add more profile fields as desired */}
     </div>
+  );
+}
+
+export default function StravaProfile() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <StravaProfileInner />
+    </Suspense>
   );
 }
