@@ -15,9 +15,9 @@ export const minikitConfig = {
   },
   miniapp: {
     version: "1",
-    name: "Cubey", 
-    subtitle: "Your AI Ad Companion", 
-    description: "Ads",
+    name: "Commuter Rewards", // <-- Changed!
+    subtitle: "Earn rewards for your commute!", // <-- Update as you like
+    description: "A web3-powered app to track and reward your commutes.", // <-- Update as you like
     screenshotUrls: [`${ROOT_URL}/screenshot-portrait.png`],
     iconUrl: `${ROOT_URL}/blue-icon.png`,
     splashImageUrl: `${ROOT_URL}/blue-hero.png`,
@@ -25,12 +25,11 @@ export const minikitConfig = {
     homeUrl: ROOT_URL,
     webhookUrl: `${ROOT_URL}/api/webhook`,
     primaryCategory: "social",
-    tags: ["marketing", "ads", "quickstart", "waitlist"],
-    heroImageUrl: `${ROOT_URL}/blue-hero.png`, 
+    tags: ["commute", "rewards", "strava", "waitlist"],
+    heroImageUrl: `${ROOT_URL}/blue-hero.png`,
     tagline: "",
     ogTitle: "",
     ogDescription: "",
     ogImageUrl: `${ROOT_URL}/blue-hero.png`,
   },
 } as const;
-
