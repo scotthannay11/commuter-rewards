@@ -61,7 +61,7 @@ export default function Home() {
     }
 
     if (authError || !authData?.success) {
-      setError("Please authenticate to commute and earn");
+      setError("Please authenticate to join the waitlist");
       return;
     }
 
