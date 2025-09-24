@@ -61,7 +61,7 @@ export default function Home() {
     }
 
     if (authError || !authData?.success) {
-      setError("Please authenticate to join the waitlist");
+      setError("Please authenticate to commute and earn");
       return;
     }
 
@@ -113,6 +113,11 @@ export default function Home() {
               JOIN WAITLIST
             </button>
           </form>
+          <a href="/api/strava/oauth">
+  <button style={{ backgroundColor: "#fc4c02", color: "#fff", marginTop: "1rem" }}>
+    Connect with Strava
+  </button>
+</a>
         </div>
       </div>
     </div>
